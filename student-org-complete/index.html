@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- This policy permits project scripts/styles only. Keep behavior in external JavaScript files. -->
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      Advanced Student Organization and Set Analytics System
+    </title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- defer waits for the HTML to be parsed; renderer loads before workspace. -->
+    <script src="renderer.js" defer>
+    </script>
+    <script src="workspace.js" defer>
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#workspace">
+      Skip to content
+    </a>
+    <!-- Navigation changes which page is visible; all feature IDs stay stable for JavaScript. -->
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-mark">
+          ∩
+        </span>
+        <div>
+          <strong>
+            Campus Sets
+          </strong>
+          <small>
+            Student organization analytics
+          </small>
+        </div>
+      </div>
+      <p class="nav-label">
+        WORKSPACE
+      </p>
+      <nav aria-label="Main navigation">
+        <button class="nav-item" data-view="overview" aria-current="page">
+          <span class="nav-symbol" aria-hidden="true">
+            01
+          </span>
+          Overview
+        </button>
+        <button class="nav-item" data-view="members" >
+          <span class="nav-symbol" aria-hidden="true">
+            02
+          </span>
+          Members
+        </button>
+        <button class="nav-item" data-view="sets" >
+          <span class="nav-symbol" aria-hidden="true">
+            03
+          </span>
+          Set laboratory
+        </button>
+        <button class="nav-item" data-view="analytics" >
+          <span class="nav-symbol" aria-hidden="true">
+            04
+          </span>
+          Analytics
+        </button>
+        <button class="nav-item" data-view="committees" >
+          <span class="nav-symbol" aria-hidden="true">
+            05
+          </span>
+          Committees
+        </button>
+        <button class="nav-item" data-view="verification" >
+          <span class="nav-symbol" aria-hidden="true">
+            06
+          </span>
+          Verification
+        </button>
+        <button class="nav-item" data-view="performance" >
+          <span class="nav-symbol" aria-hidden="true">
+            07
+          </span>
+          Performance
+        </button>
+        <button class="nav-item" data-view="reports" >
+          <span class="nav-symbol" aria-hidden="true">
+            08
+          </span>
+          Reports & data
+        </button>
+      </nav>
+      <div class="sidebar-foot">
+        <span class="live-dot">
+        </span>
+        Local workspace
+        <small>
+          Simulated data · School project
+        </small>
+      </div>
+    </aside>
+    <div class="app-shell">
+      <header class="app-header">
+        <span id="page-location">
+          Overview
+        </span>
+        <span class="header-badge">
+          Advanced set theory
+        </span>
+      </header>
+      <!-- Only one workspace page is visible at a time. Status messages announce async results. -->
+      <main id="workspace" tabindex="-1">
+        <section class="workspace-page" id="page-overview" data-page="overview" aria-labelledby="heading-overview" >
+          <div class="page-heading">
+            <h1 id="heading-overview">
+              Discrete Structures Project
+            </h1>
+            <p>
+            </p>
+          </div>
+          <div class="hero-card">
+            <div>
+              <span class="hero-kicker">
+                ADVANCED STUDENT ORGANIZATION & SET ANALYTICS
+              </span>
+              <h2>
+                Universal College
+                <br>
+                Of Parañaque
+              </h2>
+              <button data-open="analytics">
+                Explore insights
+                <span aria-hidden="true">
+                  →
+                </span>
+              </button>
+            </div>
+            <div class="set-illustration" aria-hidden="true">
+              <span class="circle circle-a">
+                A
+              </span>
+              <span class="circle circle-b">
+                B
+              </span>
+              <span class="intersection-label">
+                A ∩ B
+              </span>
+            </div>
+          </div>
+          <div class="stat-grid">
+            <article>
+              <span>
+                Students
+              </span>
+              <strong id="stat-students">
+                —
+              </strong>
+              <small>
+                Complete population U
+              </small>
+            </article>
+            <article>
+              <span>
+                Organizations
+              </span>
+              <strong id="stat-organizations">
+                —
+              </strong>
+              <small>
+                Distinct membership sets
+              </small>
+            </article>
+            <article>
+              <span>
+                Memberships
+              </span>
+              <strong id="stat-memberships">
+                —
+              </strong>
+              <small>
+                Unique student–club pairs
+              </small>
+            </article>
+            <article>
+              <span>
+                Active students
+              </span>
+              <strong id="stat-active">
+                —
+              </strong>
+              <small>
+                At least one organization
+              </small>
+            </article>
+          </div>
+          <div class="overview-grid">
+            <section class="welcome-card">
+              <div class="directory-header">
+                <h2>
+                  Participation by organization
+                </h2>
+                <button id="refresh-overview" class="secondary">
+                  Refresh
+                </button>
+              </div>
+              <p id="overview-status" role="status" aria-live="polite">
+                Loading the campus snapshot…
+              </p>
+              <div id="overview-bars" class="overview-bars">
+              </div>
+            </section>
+            <section class="welcome-card">
+              <p class="eyebrow">
+                EXPLORE THE MATHEMATICS
+              </p>
+              <h2>
+                From membership to meaning
+              </h2>
+              <div class="quick-list">
+                <button data-open="sets">
+                  <strong>
+                    01 · Set operations
+                  </strong>
+                  <span>
+                    Union, intersection, power sets, and more →
+                  </span>
+                </button>
+                <button data-open="committees">
+                  <strong>
+                    02 · Committee planning
+                  </strong>
+                  <span>
+                    Exact combinations with exclusions →
+                  </span>
+                </button>
+                <button data-open="verification">
+                  <strong>
+                    03 · Verify the laws
+                  </strong>
+                  <span>
+                    De Morgan’s laws, checked directly →
+                  </span>
+                </button>
+              </div>
+            </section>
+          </div>
+        </section>
+        <section class="workspace-page" id="page-members" data-page="members" aria-labelledby="heading-members" hidden>
+          <div class="page-heading">
+            <h1 id="heading-members">
+              Members & organizations
+            </h1>
+          </div>
+          <section class="welcome-card" aria-labelledby="students-title">
+            <div class="directory-header">
+              <div>
+                <h2 id="students-title">
+                  Students
+                </h2>
+                <p>
+                  Simulated student records saved in your database.
+                </p>
+              </div>
+              <button id="refresh-students" type="button">
+                Refresh students
+              </button>
+            </div>
+            <p id="students-status" class="directory-status" role="status" aria-live="polite">
+              Loading students…
+            </p>
+            <div class="table-container" id="students-region" aria-busy="true">
+              <table>
+                <caption class="visually-hidden">
+                  Student IDs, full names, and courses
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">
+                      Student ID
+                    </th>
+                    <th scope="col">
+                      Full name
+                    </th>
+                    <th scope="col">
+                      Course
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="students-body">
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section class="welcome-card" aria-labelledby="organizations-title">
+            <h2 id="organizations-title">
+              Organization members
+            </h2>
+            <label for="organization-select">
+              Choose an organization:
+            </label>
+            <select id="organization-select" disabled>
+              <option value="">
+                Select an organization
+              </option>
+            </select>
+            <div class="membership-controls">
+              <label for="membership-student-select">
+                Choose a student:
+              </label>
+              <select id="membership-student-select" disabled>
+                <option value="">
+                  Select a student
+                </option>
+              </select>
+              <button id="join-organization" type="button" disabled>
+                Join organization
+              </button>
+              <button id="remove-membership" type="button" disabled>
+                Remove membership
+              </button>
+              <p id="membership-status" role="status" aria-live="polite">
+                Select an organization and a student to manage membership.
+              </p>
+            </div>
+            <p id="members-status" role="status" aria-live="polite">
+              Organization controls are being set up.
+            </p>
+            <div class="table-container">
+              <table>
+                <caption class="visually-hidden">
+                  Members of the selected organization
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">
+                      Student ID
+                    </th>
+                    <th scope="col">
+                      Full name
+                    </th>
+                    <th scope="col">
+                      Course
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="members-body">
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section class="welcome-card" aria-labelledby="duplicates-title">
+            <h2 id="duplicates-title">
+              Duplicate membership detection and removal
+            </h2>
+            <p>
+              A duplicate repeats the same student–organization pair. Joining two different organizations is valid. This tool cleans pasted rows; saved memberships already prevent duplicate pairs.
+            </p>
+            <div class="analysis-controls">
+              <label for="duplicate-input">
+                Sample or pasted rows: student ID, organization ID (one pair per line, at most 1,000 rows)
+              </label>
+              <textarea id="duplicate-input" rows="6" maxlength="24000" spellcheck="false">1,1
+1,1
+1,2
+2,1
+2,1</textarea>
+              <p>
+                These are sample rows only. Removing duplicates updates this text, without changing saved memberships.
+              </p>
+              <div class="action-buttons">
+                <button id="detect-duplicates" type="button">
+                  Detect duplicates
+                </button>
+                <button id="remove-duplicates" type="button">
+                  Remove duplicate rows
+                </button>
+                <button id="audit-memberships" type="button">
+                  Check saved memberships
+                </button>
+              </div>
+            </div>
+            <p id="duplicate-status" class="directory-status" role="status" aria-live="polite">
+              Detect repeated pairs, then remove the extra copies.
+            </p>
+            <div class="table-container" id="duplicate-region" aria-busy="false">
+              <table>
+                <caption class="visually-hidden">
+                  Repeated membership pairs and extra copies
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">
+                      Student ID
+                    </th>
+                    <th scope="col">
+                      Organization ID
+                    </th>
+                    <th scope="col">
+                      Copies
+                    </th>
+                    <th scope="col">
+                      Extra copies
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="duplicate-body">
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+        <section class="workspace-page" id="page-sets" data-page="sets" aria-labelledby="heading-sets" hidden>
+          <div class="page-heading">
+            <h1 id="heading-sets">
+              Set laboratory
+            </h1>
+          </div>
+          <section class="welcome-card" aria-labelledby="union-title">
+            <h2 id="union-title">
+              Organization set operations
+            </h2>
+            <p>
+              Select at least two organizations. Union finds students belonging to any selected organization. Intersection finds students belonging to every selected organization.
+            </p>
+            <fieldset>
+              <legend>
+                Choose organizations
+              </legend>
+              <div id="union-organizations">
+                Loading organization choices…
+              </div>
+            </fieldset>
+            <button id="calculate-union" type="button" disabled>
+              Calculate union
+            </button>
+            <button id="calculate-intersection" type="button" disabled>
+              Calculate intersection
+            </button>
+            <p id="union-status" role="status" aria-live="polite">
+              Union controls are being set up.
+            </p>
+            <div class="table-container" id="union-region" aria-busy="false">
+              <table>
+                <caption class="visually-hidden">
+                  Students returned by the selected set operation
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">
+                      Student ID
+                    </th>
+                    <th scope="col">
+                      Full name
+                    </th>
+                    <th scope="col">
+                      Course
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="union-body">
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section class="welcome-card" aria-labelledby="difference-title">
+            <h2 id="difference-title">
+              Compare two organizations
+            </h2>
+            <p>
+              Difference finds members of A who are not in B. Symmetric difference finds members belonging to either organization, excluding those who belong to both.
+            </p>
+            <div>
+              <label for="difference-a">
+                Organization A:
+              </label>
+              <select id="difference-a" disabled>
+                <option value="">
+                  Select Organization A
+                </option>
+              </select>
+            </div>
+            <div>
+              <label for="difference-b">
+                Organization B:
+              </label>
+              <select id="difference-b" disabled>
+                <option value="">
+                  Select Organization B
+                </option>
+              </select>
+            </div>
+            <button id="calculate-difference" type="button" disabled>
+              Calculate A − B
+            </button>
+            <button id="calculate-symmetric-difference" type="button" disabled>
+              Calculate symmetric difference
+            </button>
+            <button id="check-relations" type="button" disabled>
+              Check subset and superset
+            </button>
+            <ul class="relations-help">
+              <li>
+                <strong>
+                  Subset (A ⊆ B):
+                </strong>
+                Every member of A also belongs to B.
+              </li>
+              <li>
+                <strong>
+                  Superset (A ⊇ B):
+                </strong>
+                A contains every member of B.
+              </li>
+              <li>
+                <strong>
+                  Equal sets:
+                </strong>
+                A and B have exactly the same members, so both checks are Yes.
+              </li>
+            </ul>
+            <p id="relations-status" role="status" aria-live="polite">
+              Choose A and B, then click Check subset and superset.
+            </p>
+            <p id="difference-status" role="status" aria-live="polite">
+              Difference controls are being set up.
+            </p>
+            <div
+    class="table-container"
+    id="difference-region"
+    aria-busy="false"
+  >
+              <table>
+                <caption class="visually-hidden">
+                  Students returned by the selected comparison
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">
+                      Student ID
+                    </th>
+                    <th scope="col">
+                      Full name
+                    </th>
+                    <th scope="col">
+                      Course
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="difference-body">
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section class="welcome-card" aria-labelledby="complement-title">
+            <h2 id="complement-title">
+              Complement: students outside an organization
+            </h2>
+            <p>
+              The universal set U contains all students in the database. The complement of A is U − A: students who do not belong to the selected organization, even if they belong to other organizations.
+            </p>
+            <div class="complement-controls">
+              <label for="complement-organization">
+                Organization A:
+              </label>
+              <select id="complement-organization" disabled>
+                <option value="">
+                  Select an organization
+                </option>
+              </select>
+              <button id="calculate-complement" type="button" disabled>
+                Calculate complement
+              </button>
+            </div>
+            <p id="complement-status" class="directory-status" role="status" aria-live="polite">
+              Loading organization choices…
+            </p>
+            <div class="table-container" id="complement-region" aria-busy="false">
+              <table>
+                <caption class="visually-hidden">
+                  Students who do not belong to the selected organization
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">
+                      Student ID
+                    </th>
+                    <th scope="col">
+                      Full name
+                    </th>
+                    <th scope="col">
+                      Course
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="complement-body">
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section class="welcome-card" aria-labelledby="power-title">
+            <h2 id="power-title">
+              Power set and cardinality
+            </h2>
+            <p>
+              A power set contains every subset, including ∅ and the complete input set. A set with n unique elements has 2ⁿ subsets.
+            </p>
+            <div class="analysis-controls">
+              <label for="power-input">
+                Student IDs, separated by commas (leave blank for ∅)
+              </label>
+              <input id="power-input" type="text" value="1, 2, 3" maxlength="12000" aria-describedby="power-help">
+              <label for="power-limit">
+                Maximum unique elements
+              </label>
+              <input id="power-limit" type="number" min="1" max="10" step="1" value="8">
+              <p id="power-help">
+                Use existing student IDs. Choose a limit from 1 to 10; at most 1,024 subsets can be generated. Repeated IDs count once.
+              </p>
+              <button id="generate-power" type="button">
+                Generate power set
+              </button>
+            </div>
+            <p id="power-status" class="directory-status" role="status" aria-live="polite">
+              Enter a small set of student IDs.
+            </p>
+            <div class="table-container bounded-results" id="power-region" aria-busy="false">
+              <table>
+                <caption class="visually-hidden">
+                  Generated subsets and their cardinalities
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">
+                      Subset
+                    </th>
+                    <th scope="col">
+                      Cardinality
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="power-body">
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+        <section class="workspace-page" id="page-analytics" data-page="analytics" aria-labelledby="heading-analytics" hidden>
+          <div class="page-heading">
+            <h1 id="heading-analytics">
+              Participation insights
+            </h1>
+          </div>
+          <section class="welcome-card" aria-labelledby="participation-title">
+            <h2 id="participation-title">
+              Membership participation analytics
+            </h2>
+            <p>
+              Count each student's memberships across all organizations. Students with no memberships have a count of zero.
+            </p>
+            <div class="analysis-controls">
+              <label for="participation-view">
+                Choose a view:
+              </label>
+              <select id="participation-view">
+                <option value="all">
+                  All students
+                </option>
+                <option value="exactly-one">
+                  Exactly one organization
+                </option>
+                <option value="at-least-three">
+                  At least three organizations
+                </option>
+              </select>
+              <button id="load-participation" type="button" disabled>
+                Load analytics
+              </button>
+            </div>
+            <p
+    id="participation-status"
+    class="directory-status"
+    role="status"
+    aria-live="polite"
+  >
+              Analytics controls are being set up.
+            </p>
+            <div
+    class="table-container bounded-results"
+    id="participation-region"
+    aria-busy="false"
+  >
+              <table>
+                <caption class="visually-hidden">
+                  Students, their organizations, and membership counts
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">
+                      Student ID
+                    </th>
+                    <th scope="col">
+                      Full name
+                    </th>
+                    <th scope="col">
+                      Organizations
+                    </th>
+                    <th scope="col">
+                      Membership count
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="participation-body">
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section class="welcome-card" aria-labelledby="similarity-title">
+            <h2 id="similarity-title">
+              Organization similarity and overlap rankings
+            </h2>
+            <p>
+              Jaccard similarity = shared members ÷ all students in either organization, counted once: |A ∩ B| ÷ |A ∪ B|. Pairs are ordered by similarity, then shared-member count. Two empty sets are treated as identical (100%).
+            </p>
+            <div class="analysis-controls">
+              <button id="load-similarity" type="button" disabled>
+                Calculate similarities and rankings
+              </button>
+            </div>
+            <p id="similarity-status" class="directory-status" role="status" aria-live="polite">
+              Click Calculate to read current memberships.
+            </p>
+            <div id="similarity-region" class="table-container bounded-results" aria-busy="false">
+              <table>
+                <caption class="visually-hidden">
+                  Organization pairs ranked by Jaccard similarity
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">
+                      Position
+                    </th>
+                    <th scope="col">
+                      Organization A
+                    </th>
+                    <th scope="col">
+                      Organization B
+                    </th>
+                    <th scope="col">
+                      Shared members
+                    </th>
+                    <th scope="col">
+                      Unique members
+                    </th>
+                    <th scope="col">
+                      Jaccard similarity
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="similarity-body">
+                </tbody>
+              </table>
+            </div>
+            <h3 class="analytics-subheading">
+              Individual organization rankings
+            </h3>
+            <p>
+              Ordered by the number of distinct members who also join another organization. Each person is counted once per organization. Ties use overlap rate, then organization ID.
+            </p>
+            <div class="table-container bounded-results">
+              <table>
+                <caption class="visually-hidden">
+                  Organizations ranked by distinct overlapping members
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">
+                      Position
+                    </th>
+                    <th scope="col">
+                      Organization
+                    </th>
+                    <th scope="col">
+                      Members
+                    </th>
+                    <th scope="col">
+                      Overlapping members
+                    </th>
+                    <th scope="col">
+                      Overlap rate
+                    </th>
+                    <th scope="col">
+                      Average Jaccard
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="overlap-body">
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section class="welcome-card" aria-labelledby="recommendation-title">
+            <h2 id="recommendation-title">
+              Organization recommendations
+            </h2>
+            <p>
+              Choose a student and optional interests. Organizations they already belong to are excluded. These interest choices are used for this calculation and are not saved to the student record.
+            </p>
+            <div class="analysis-controls">
+              <label for="recommendation-student">
+                Student
+              </label>
+              <select id="recommendation-student" disabled>
+                <option value="">
+                  Select a student
+                </option>
+              </select>
+              <fieldset id="recommendation-interests" disabled>
+                <legend>
+                  Selected interests (optional)
+                </legend>
+                <div id="recommendation-interest-choices">
+                </div>
+              </fieldset>
+              <button id="load-recommendations" type="button" disabled>
+                Recommend organizations
+              </button>
+            </div>
+            <p id="recommendation-status" class="directory-status" role="status" aria-live="polite">
+              Loading students and interests…
+            </p>
+            <p id="recommendation-current" class="directory-status">
+            </p>
+            <div id="recommendation-region" class="table-container bounded-results" aria-busy="false">
+              <table>
+                <caption class="visually-hidden">
+                  Suggested organizations and explanations
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">
+                      Position
+                    </th>
+                    <th scope="col">
+                      Organization
+                    </th>
+                    <th scope="col">
+                      Match score
+                    </th>
+                    <th scope="col">
+                      Interest match
+                    </th>
+                    <th scope="col">
+                      Membership affinity
+                    </th>
+                    <th scope="col">
+                      Matched interests
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="recommendation-body">
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+        <section class="workspace-page" id="page-committees" data-page="committees" aria-labelledby="heading-committees" hidden>
+          <div class="page-heading">
+            <h1 id="heading-committees">
+              Committee studio
+            </h1>
+          </div>
+          <section class="welcome-card">
+            <h2>
+              Choose your eligible pool
+            </h2>
+            <p>
+              Leave the pool choices empty to include all students. Selecting several pools uses their union. Excluding any selected organization removes its members, even when they also belong to an included pool.
+            </p>
+            <div class="two-column">
+              <fieldset>
+                <legend>
+                  Include members of (optional)
+                </legend>
+                <div id="committee-pools" class="choice-list">
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>
+                  Exclude members of (optional)
+                </legend>
+                <div id="committee-exclusions" class="choice-list">
+                </div>
+              </fieldset>
+            </div>
+            <div class="analysis-controls">
+              <label for="committee-size">
+                Committee size k
+              </label>
+              <input id="committee-size" type="number" min="0" step="1" value="3">
+              <button id="calculate-committee" disabled>
+                Calculate committees
+              </button>
+            </div>
+            <p id="committee-status" class="result-block" role="status" aria-live="polite">
+              Loading eligible organization choices…
+            </p>
+            <p class="hint">
+              Committees are unordered groups without replacement. C(n, 0) = 1; choosing more than the eligible population gives 0. No committee is created or saved.
+            </p>
+            <div class="table-container bounded-results">
+              <table>
+                <caption class="visually-hidden">
+                  Eligible students after committee restrictions
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">
+                      Student ID
+                    </th>
+                    <th scope="col">
+                      Name
+                    </th>
+                    <th scope="col">
+                      Course
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="committee-body">
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+        <section class="workspace-page" id="page-verification" data-page="verification" aria-labelledby="heading-verification" hidden>
+          <div class="page-heading">
+            <h1 id="heading-verification">
+              Mathematical verification
+            </h1>
+          </div>
+          <section class="welcome-card">
+            <h2>
+              De Morgan’s laws
+            </h2>
+            <p>
+              Complements are relative to every student in the database. Choose A and B to compare each expression with an independent direct predicate calculation.
+            </p>
+            <div class="two-column">
+              <div class="analysis-controls">
+                <label for="verification-a">
+                  Organization A
+                </label>
+                <select id="verification-a" disabled>
+                  <option value="">
+                    Select A
+                  </option>
+                </select>
+              </div>
+              <div class="analysis-controls">
+                <label for="verification-b">
+                  Organization B
+                </label>
+                <select id="verification-b" disabled>
+                  <option value="">
+                    Select B
+                  </option>
+                </select>
+              </div>
+            </div>
+            <button id="run-verification" disabled>
+              Verify both laws
+            </button>
+            <p id="verification-status" class="directory-status" role="status" aria-live="polite">
+              Choose two organizations.
+            </p>
+            <div id="verification-results" class="proof-results">
+            </div>
+          </section>
+        </section>
+        <section class="workspace-page" id="page-performance" data-page="performance" aria-labelledby="heading-performance" hidden>
+          <div class="page-heading">
+            <h1 id="heading-performance">
+              Performance laboratory
+            </h1>
+          </div>
+          <section class="welcome-card">
+            <h2>
+              List lookup vs hash-set lookup
+            </h2>
+            <p>
+              Compare Array.includes and Set.has on populations of 100, 1,000, 10,000, and 50,000 simulated IDs. Each trial uses 4,000 fixed queries: half hits and half misses. Results are medians of five trials after a warmup, with trial order alternated.
+            </p>
+            <div class="action-buttons">
+              <button id="run-benchmark">
+                Run performance comparison
+              </button>
+            </div>
+            <p id="benchmark-status" class="directory-status" role="status" aria-live="polite">
+              The benchmark runs in a worker, keeping this window responsive.
+            </p>
+            <div class="table-container">
+              <table>
+                <caption class="visually-hidden">
+                  Measured list and hash-set timing in milliseconds
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">
+                      Population
+                    </th>
+                    <th scope="col">
+                      List lookup (ms)
+                    </th>
+                    <th scope="col">
+                      Set lookup (ms)
+                    </th>
+                    <th scope="col">
+                      Set build (ms)
+                    </th>
+                    <th scope="col">
+                      Build + lookup (ms)
+                    </th>
+                    <th scope="col">
+                      Lookup speedup
+                    </th>
+                    <th scope="col">
+                      Equal results
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="benchmark-body">
+                </tbody>
+              </table>
+            </div>
+            <div class="notice">
+              <strong>
+                Read the results fairly.
+              </strong>
+              <p>
+                List lookup is O(n) per query; hash-set lookup is average O(1), with O(n) construction and additional memory. Tiny timings are sensitive to runtime noise. Lookup-only speedup excludes set construction; compare the build-plus-lookup column for a one-time workload. These results do not measure SQLite speed.
+              </p>
+            </div>
+          </section>
+        </section>
+        <section class="workspace-page" id="page-reports" data-page="reports" aria-labelledby="heading-reports" hidden>
+          <div class="page-heading">
+            <h1 id="heading-reports">
+              Reports & dataset
+            </h1>
+          </div>
+          <section class="welcome-card">
+            <h2>
+              Project evidence
+            </h2>
+            <div class="action-buttons">
+              <button id="export-dataset">
+                Export current dataset
+              </button>
+              <button class="secondary" data-report="guide">
+                User guide
+              </button>
+              <button class="secondary" data-report="mathematics">
+                Mathematical report
+              </button>
+              <button class="secondary" data-report="tests">
+                Test cases
+              </button>
+              <button class="secondary" data-report="performance">
+                Performance report
+              </button>
+            </div>
+            <p id="report-status" class="directory-status" role="status" aria-live="polite">
+              Choose a report to read it here.
+            </p>
+            <div id="report-content" class="report-content" tabindex="0" role="region" aria-label="Selected report"></div>
+          </section>
+        </section>
+      </main>
+      <footer>
+        <span id="runtime-label">
+          Electron desktop application
+        </span>
+        <span id="database-status">
+          Reading database…
+        </span>
+      </footer>
+    </div>
+  </body>
+</html>

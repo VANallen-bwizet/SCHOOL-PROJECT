@@ -1,0 +1,266 @@
+TAP version 13
+# Subtest: participation includes zero memberships and counts unique organizations
+ok 1 - participation includes zero memberships and counts unique organizations
+  ---
+  duration_ms: 3.3232
+  type: 'test'
+  ...
+# Subtest: Jaccard handles partial overlap, disjoint, equal, and empty sets
+ok 2 - Jaccard handles partial overlap, disjoint, equal, and empty sets
+  ---
+  duration_ms: 0.3683
+  type: 'test'
+  ...
+# Subtest: pair comparisons are distinct, sorted, and total n(n-1)/2
+ok 3 - pair comparisons are distinct, sorted, and total n(n-1)/2
+  ---
+  duration_ms: 1.6507
+  type: 'test'
+  ...
+# Subtest: organization ranking counts each overlapping person once per organization
+ok 4 - organization ranking counts each overlapping person once per organization
+  ---
+  duration_ms: 0.7763
+  type: 'test'
+  ...
+# Subtest: recommendations combine signals, exclude joined clubs, and explain matches
+ok 5 - recommendations combine signals, exclude joined clubs, and explain matches
+  ---
+  duration_ms: 0.9827
+  type: 'test'
+  ...
+# Subtest: recommendations support no memberships, no interests, no matches, and all clubs joined
+ok 6 - recommendations support no memberships, no interests, no matches, and all clubs joined
+  ---
+  duration_ms: 0.728
+  type: 'test'
+  ...
+# Subtest: all analytics handlers run with validated senders and actual imported functions
+ok 7 - all analytics handlers run with validated senders and actual imported functions
+  ---
+  duration_ms: 23.7327
+  type: 'test'
+  ...
+# Subtest: preload routes analytics methods through specific channels
+ok 8 - preload routes analytics methods through specific channels
+  ---
+  duration_ms: 2.397
+  type: 'test'
+  ...
+# Subtest: renderer fills analytics tables, excludes joined clubs, and restores controls after failure
+ok 9 - renderer fills analytics tables, excludes joined clubs, and restores controls after failure
+  ---
+  duration_ms: 10.6175
+  type: 'test'
+  ...
+# Subtest: exact committee combinations include edge cases and integers above Number precision
+ok 10 - exact committee combinations include edge cases and integers above Number precision
+  ---
+  duration_ms: 2.1184
+  type: 'test'
+  ...
+# Subtest: committee eligibility uses union pools and excludes any prohibited membership
+ok 11 - committee eligibility uses union pools and excludes any prohibited membership
+  ---
+  duration_ms: 1.8531
+  type: 'test'
+  ...
+# Subtest: De Morgan laws compare actual IDs, direct predicates, and all 256 sample set pairs
+ok 12 - De Morgan laws compare actual IDs, direct predicates, and all 256 sample set pairs
+  ---
+  duration_ms: 7.1849
+  type: 'test'
+  ...
+# Subtest: final handlers register independently, validate inputs, and preserve cancelable export
+ok 13 - final handlers register independently, validate inputs, and preserve cancelable export
+  ---
+  duration_ms: 24.7355
+  type: 'test'
+  ...
+# Subtest: benchmark worker measures growing populations with equal hit results
+ok 14 - benchmark worker measures growing populations with equal hit results
+  ---
+  duration_ms: 656.7976
+  type: 'test'
+  ...
+# Subtest: new page contains every renderer ID exactly once and honors reduced motion
+ok 15 - new page contains every renderer ID exactly once and honors reduced motion
+  ---
+  duration_ms: 5.2693
+  type: 'test'
+  ...
+# Subtest: IPC rejects missing frames, sparse ID arrays, and oversized set requests
+ok 16 - IPC rejects missing frames, sparse ID arrays, and oversized set requests
+  ---
+  duration_ms: 28.6672
+  type: 'test'
+  ...
+# Subtest: benchmark normal exit without a result rejects immediately and permits retry
+ok 17 - benchmark normal exit without a result rejects immediately and permits retry
+  ---
+  duration_ms: 4.4332
+  type: 'test'
+  ...
+# Subtest: benchmark coalesces concurrent requests and handles error/malformed messages
+ok 18 - benchmark coalesces concurrent requests and handles error/malformed messages
+  ---
+  duration_ms: 7.2239
+  type: 'test'
+  ...
+# Subtest: benchmark timeout and app shutdown terminate the active worker
+ok 19 - benchmark timeout and app shutdown terminate the active worker
+  ---
+  duration_ms: 4.9152
+  type: 'test'
+  ...
+# (node:58136) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: organization tags ignore inherited object names and return independent arrays
+ok 20 - organization tags ignore inherited object names and return independent arrays
+  ---
+  duration_ms: 2.2391
+  type: 'test'
+  ...
+# Subtest: median supports odd and even trial counts without reordering raw measurements
+ok 21 - median supports odd and even trial counts without reordering raw measurements
+  ---
+  duration_ms: 1.1285
+  type: 'test'
+  ...
+# Subtest: database setup closes failed connections and keeps a single active connection
+ok 22 - database setup closes failed connections and keeps a single active connection
+  ---
+  duration_ms: 5.4478
+  type: 'test'
+  ...
+# Subtest: seed failure rolls back every inserted student and organization
+ok 23 - seed failure rolls back every inserted student and organization
+  ---
+  duration_ms: 2.0954
+  type: 'test'
+  ...
+# (node:57868) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: importing report helpers leaves generated documents and data unchanged
+ok 24 - importing report helpers leaves generated documents and data unchanged
+  ---
+  duration_ms: 1.8075
+  type: 'test'
+  ...
+# Subtest: CSV export preserves commas, quotes, empty values, and line breaks
+ok 25 - CSV export preserves commas, quotes, empty values, and line breaks
+  ---
+  duration_ms: 0.3911
+  type: 'test'
+  ...
+# Subtest: test-report parsing preserves failed, skipped, and todo case statuses
+ok 26 - test-report parsing preserves failed, skipped, and todo case statuses
+  ---
+  duration_ms: 1.4201
+  type: 'test'
+  ...
+# Subtest: report generation refuses absent totals and an empty test discovery result
+ok 27 - report generation refuses absent totals and an empty test discovery result
+  ---
+  duration_ms: 0.6426
+  type: 'test'
+  ...
+# Subset and superset verification failed: Error: A selected organization does not exist.
+#     at evalmachine.<anonymous>:437:15
+#     at C:\\Users\\Allen Mualla\\Documents\\Codex\\2026-10-21\\i-am-a-beginner-building-a-2\\outputs\\student-org-complete\\tests\\set-relations.test.cjs:97:23
+#     at getActual (node:assert:609:5)
+#     at Function.throws (node:assert:757:24)
+#     at TestContext.<anonymous> (C:\\Users\\Allen Mualla\\Documents\\Codex\\2026-10-21\\i-am-a-beginner-building-a-2\\outputs\\student-org-complete\\tests\\set-relations.test.cjs:97:10)
+#     at Test.runInAsyncScope (node:async_hooks:214:14)
+#     at Test.run (node:internal/test_runner/test:1047:25)
+#     at Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+#     at Test.postRun (node:internal/test_runner/test:1173:19)
+#     at Test.run (node:internal/test_runner/test:1101:12)
+# Complement calculation failed: Error: Organization does not exist.
+#     at evalmachine.<anonymous>:472:32
+#     at C:\\Users\\Allen Mualla\\Documents\\Codex\\2026-10-21\\i-am-a-beginner-building-a-2\\outputs\\student-org-complete\\tests\\set-relations.test.cjs:237:23
+#     at getActual (node:assert:609:5)
+#     at Function.throws (node:assert:757:24)
+#     at TestContext.<anonymous> (C:\\Users\\Allen Mualla\\Documents\\Codex\\2026-10-21\\i-am-a-beginner-building-a-2\\outputs\\student-org-complete\\tests\\set-relations.test.cjs:237:10)
+#     at Test.runInAsyncScope (node:async_hooks:214:14)
+#     at Test.run (node:internal/test_runner/test:1047:25)
+#     at Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+#     at Test.postRun (node:internal/test_runner/test:1173:19)
+#     at Test.run (node:internal/test_runner/test:1101:12)
+# (node:56908) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: subset and superset handle containment, overlap, equality, and empty sets
+ok 28 - subset and superset handle containment, overlap, equality, and empty sets
+  ---
+  duration_ms: 2.1442
+  type: 'test'
+  ...
+# Subtest: main handler registers at startup and returns correct relation results
+ok 29 - main handler registers at startup and returns correct relation results
+  ---
+  duration_ms: 16.2336
+  type: 'test'
+  ...
+# Subtest: main handler rejects invalid IDs and untrusted senders
+ok 30 - main handler rejects invalid IDs and untrusted senders
+  ---
+  duration_ms: 4.499
+  type: 'test'
+  ...
+# Subtest: preload exposes the specific relation request and preserves other set methods
+ok 31 - preload exposes the specific relation request and preserves other set methods
+  ---
+  duration_ms: 2.0436
+  type: 'test'
+  ...
+# Subtest: power set has unique subsets, includes the empty/full sets, and satisfies 2^n
+ok 32 - power set has unique subsets, includes the empty/full sets, and satisfies 2^n
+  ---
+  duration_ms: 3.065
+  type: 'test'
+  ...
+# Subtest: membership cleanup detects repeated pairs and preserves multiple organizations
+ok 33 - membership cleanup detects repeated pairs and preserves multiple organizations
+  ---
+  duration_ms: 0.474
+  type: 'test'
+  ...
+# Subtest: new handlers register before use, validate inputs, and reject untrusted requests
+ok 34 - new handlers register before use, validate inputs, and reject untrusted requests
+  ---
+  duration_ms: 3.6513
+  type: 'test'
+  ...
+# Subtest: actual SQLite schema blocks duplicate membership pairs but allows other organizations
+ok 35 - actual SQLite schema blocks duplicate membership pairs but allows other organizations
+  ---
+  duration_ms: 1.1946
+  type: 'test'
+  ...
+# Subtest: complement handles empty, complete, and partial sets without mutating inputs
+ok 36 - complement handles empty, complete, and partial sets without mutating inputs
+  ---
+  duration_ms: 0.4984
+  type: 'test'
+  ...
+# Subtest: complement handler uses all students, including those in no organizations
+ok 37 - complement handler uses all students, including those in no organizations
+  ---
+  duration_ms: 3.1483
+  type: 'test'
+  ...
+# Subtest: workspace navigation, committee, proof, and benchmark views render and recover from errors
+ok 38 - workspace navigation, committee, proof, and benchmark views render and recover from errors
+  ---
+  duration_ms: 39.9148
+  type: 'test'
+  ...
+1..38
+# tests 38
+# suites 0
+# pass 38
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 867.395
